@@ -1,0 +1,9 @@
+.feature-image {
+  margin: 0 auto;
+}
+
+@media (width >=1120px) {
+  .feature-image {
+    order: -1;
+  }
+}

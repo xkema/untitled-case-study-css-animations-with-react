@@ -1,14 +1,14 @@
 const features = [
   {
-    id: '825cc467',
+    id: 'document-scanner',
     name: 'Document Scanner',
     title: 'Scan with Ease',
     description:
-      'Scan any document instantly with your mobile device by just a few steps. Save as PDF,JPG,ZIP,TXT and Word format.',
+      'Scan any document instantly with your mobile device by just a few steps. Save as PDF, JPG, ZIP, TXT and Word format.',
     link: '#',
   },
   {
-    id: '63023138',
+    id: 'sign-and-stamp',
     name: 'Sign & Stamp',
     title: 'One-Tap Focus',
     description:
@@ -16,7 +16,7 @@ const features = [
     link: '#',
   },
   {
-    id: '6fe926d7',
+    id: 'batch-scanning',
     name: 'Batch Scanning',
     title: 'Multiple Page Scan',
     description:
@@ -24,7 +24,7 @@ const features = [
     link: '#',
   },
   {
-    id: '617df559',
+    id: 'advanced-filters',
     name: 'Advanced Filters',
     title: 'Unique Filters',
     description:
@@ -32,10 +32,10 @@ const features = [
     link: '#',
   },
   {
-    id: 'c8ce03e8',
+    id: 'export-and-share',
     name: 'Export & Share',
     title: 'All-Round Conversion',
-    description: 'Export your scans as PDF,JPG,ZIP,TXT and Word.',
+    description: 'Export your scans as PDF, JPG, ZIP, TXT and Word.',
     link: '#',
   },
 ];

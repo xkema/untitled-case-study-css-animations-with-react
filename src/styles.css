@@ -1,0 +1,53 @@
+:root {
+  --gap: 1rem;
+  --gap-small: calc(var(--gap) / 2);
+  --gap-medium: calc(var(--gap) * 2);
+  --gap-large: calc(var(--gap) * 3);
+  --gap-2xl: calc(var(--gap) * 6);
+  --gap-3xl: calc(var(--gap) * 9);
+  --color-primary: #0381ff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  margin: 0;
+
+  font: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+
+  background: none;
+  border: 0;
+}
+
+body {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro,
+    sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+@media (width >=1120px) {
+  body {
+    font-size: 1.125rem;
+  }
+}

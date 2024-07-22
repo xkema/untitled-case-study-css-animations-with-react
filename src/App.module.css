@@ -1,3 +1,48 @@
 .main {
   display: block;
 }
+
+/* width controller */
+.container {
+  min-width: 375px;
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+/* wrapper for the feature contents */
+.content {
+  position: relative;
+}
+
+/* feature block consist of a textual content and the animated image */
+.feature {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  scroll-snap-type: x mandatory;
+  overflow: auto;
+  display: flex;
+}
+
+.item {
+  scroll-snap-align: center;
+  flex: 1;
+  min-width: fit-content;
+  border-right: 1px solid whitesmoke;
+}
+
+.item:last-child {
+  border-right: none;
+}
+
+@media (width >=1120px) {
+  .container {
+    max-width: 1440px;
+  }
+
+  .feature {
+    flex-direction: row;
+  }
+}

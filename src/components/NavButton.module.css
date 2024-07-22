@@ -1,0 +1,22 @@
+.button {
+  display: flex;
+  gap: var(--gap-small);
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding: var(--gap-medium) var(--gap);
+
+  text-wrap: nowrap;
+
+  background-color: white;
+}
+
+.active {
+  background-color: #f7fbff;
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+}

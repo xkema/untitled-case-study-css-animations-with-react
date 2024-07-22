@@ -1,0 +1,266 @@
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 350px;
+  height: 350px;
+}
+
+.phone {
+  position: absolute;
+  bottom: 0;
+  left: calc((350px - 230px) / 2);
+
+  width: 230px;
+
+  animation: slide-up 1000ms forwards;
+}
+
+.particle {
+  position: absolute;
+}
+
+.signl {
+  top: 58%;
+  width: 142px;
+  opacity: 0;
+  animation:
+    scale-in 750ms 500ms forwards,
+    fade-in 750ms 500ms forwards;
+}
+
+.signr {
+  top: 40%;
+  right: 0;
+
+  width: 142px;
+
+  opacity: 0;
+
+  animation:
+    scale-in 750ms 750ms forwards,
+    fade-in 750ms 750ms forwards;
+}
+
+.fileb {
+  top: 36%;
+  left: calc((350px - 165px) / 2);
+  width: 165px;
+  animation: slide-up-and-out 500ms 750ms both;
+}
+
+.filem {
+  top: 37%;
+  left: calc((350px - 182px) / 2);
+  width: 182px;
+  animation: slide-up-and-out 500ms 1000ms both;
+}
+
+.filet {
+  top: 40%;
+  left: calc((350px - 193px) / 2);
+  width: 193px;
+  animation: slide-up-and-out 500ms 1250ms both;
+}
+
+.sliderl {
+  bottom: 3%;
+  left: 12%;
+
+  width: 28px;
+
+  opacity: 0;
+
+  animation: fade-in 750ms 500ms forwards;
+}
+
+.sliderr {
+  right: 12%;
+  bottom: 3%;
+
+  width: 28px;
+
+  opacity: 0;
+
+  animation: fade-in 750ms 750ms forwards;
+}
+
+.exporta {
+  bottom: -56px;
+  left: calc((350px - 24px) / 2);
+  transform-origin: -135px 135px;
+
+  width: 24px;
+
+  animation: rotate-in 750ms 750ms forwards;
+}
+
+.exportp {
+  bottom: -90px;
+  left: calc((350px - 72px) / 2);
+  transform-origin: -170% 110%;
+
+  width: 72px;
+
+  animation: rotate-in 750ms 1000ms forwards;
+}
+
+.exportj {
+  bottom: -90px;
+  left: calc((350px - 72px) / 2);
+  width: 72px;
+  animation: slide-up-rotate 750ms 1000ms forwards;
+}
+
+.exportt {
+  bottom: -90px;
+  left: calc((350px - 72px) / 2);
+  transform-origin: 275% 110%;
+
+  width: 72px;
+
+  animation: rotate-in-reverse 750ms 1250ms forwards;
+}
+
+/* media queries */
+@media (width >=1120px) {
+  .wrapper {
+    width: 560px;
+    height: 560px;
+  }
+
+  .phone {
+    left: calc((560px - 366px) / 2);
+    width: 366px;
+  }
+
+  .signl {
+    width: 216px;
+  }
+
+  .signr {
+    width: 216px;
+  }
+
+  .fileb {
+    left: calc((560px - 250px) / 2);
+    width: 250px;
+  }
+
+  .filem {
+    left: calc((560px - 293px) / 2);
+    width: 293px;
+  }
+
+  .filet {
+    left: calc((560px - 310px) / 2);
+    width: 310px;
+  }
+
+  .sliderl {
+    width: 42px;
+  }
+
+  .sliderr {
+    width: 42px;
+  }
+
+  .exporta {
+    bottom: -36px;
+    width: 36px;
+  }
+
+  .exportp {
+    bottom: -170px;
+    left: calc((560px - 130px) / 2);
+    width: 130px;
+  }
+
+  .exportj {
+    bottom: -170px;
+    left: calc((560px - 130px) / 2);
+    width: 130px;
+  }
+
+  .exportt {
+    bottom: -170px;
+    left: calc((560px - 130px) / 2);
+    width: 130px;
+  }
+}
+
+/* generic slide into the screen animation */
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* generic scale from quarter size to full size */
+@keyframes scale-in {
+  from {
+    transform: scale(0.25);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* generic fade in */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* generic scale from slightly bigger to full size */
+@keyframes slide-up-and-out {
+  from {
+    transform: translateY(150%) scale(1.75);
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* custom move into the screen */
+@keyframes rotate-in {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-45deg);
+  }
+}
+
+/* custom move into the screen */
+@keyframes rotate-in-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+/* custom slide in for rotate */
+@keyframes slide-up-rotate {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(-150%);
+  }
+}
