@@ -4,7 +4,7 @@ export function App() {
   return (
     <>
       <header>
-        <h1>/demos/css-with-unmounting/</h1>
+        <h1>/demos/css-with-unmounting/ - Case Study | CSS Animations</h1>
         <a href="/">back-to-home</a>
         <hr />
       </header>

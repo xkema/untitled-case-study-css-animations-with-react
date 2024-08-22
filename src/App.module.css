@@ -1,3 +1,361 @@
+:root {
+  --color-primary: #0381ff;
+  --color-link-active: #f7fbff;
+  --color-background: #f5f5f7;
+  --color-content-background: #fbfcfc;
+  --gap: 1rem;
+  --container-max-width: 1440px;
+  --content-item-max-height: 625px;
+  --content-top-right-max-width: 325px;
+  --content-top-right-min-width-desktop: 255px;
+  --content-top-right-max-width-desktop: 560px;
+  --phone-clipper-width: 225px;
+  --phone-clipper-width-desktop: 375px;
+
+  /* --phone-clipper-height: 300px; */
+
+  /* --phone-clipper-height-desktop: 500px; */
+}
+
+body {
+  background-color: var(--color-background);
+}
+
 .main {
   display: block;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: calc(2 * var(--gap));
+
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.content {
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  display: flex;
+  width: 100%;
+}
+
+.content-item {
+  scroll-snap-align: center;
+
+  /* Setting overflow in one direction can be quirky in different borwsers! */
+
+  overflow-y: clip;
+  display: flex;
+  flex: 1 0 100%;
+  flex-direction: column;
+  gap: var(--gap);
+  align-items: center;
+
+  max-width: 100%;
+  max-height: var(--content-item-max-height);
+
+  background-color: var(--color-content-background);
+
+  /* background-color: pink; */
+}
+
+.content-top-right {
+  max-width: var(--content-top-right-max-width);
+
+  /* background-color: bisque; */
+}
+
+/* .content-bottom-left {
+  background-color: aqua;
+} */
+
+.navigation {
+  scroll-snap-type: x mandatory;
+  overflow: auto;
+  display: flex;
+}
+
+.navigation-item {
+  scroll-snap-align: center;
+  flex: 1 0 auto;
+  border-right: 1px solid whitesmoke;
+}
+
+.navigation-item:last-child {
+  border-right: none;
+}
+
+.navigation-button {
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  padding: calc(2 * var(--gap)) calc(1 * var(--gap));
+
+  background-color: white;
+}
+
+/* .navigation-button-icon {} */
+
+.navigation-button-text {
+  text-wrap: nowrap;
+}
+
+.phone {
+  padding: 0 var(--gap);
+}
+
+.phone-clipper {
+  /* Mind the absolute positioned `phone-particles` container! */
+  position: relative;
+  width: var(--phone-clipper-width);
+  height: auto;
+
+  /* background-color: crimson; */
+}
+
+/* .phone-background {} */
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  align-items: center;
+
+  height: 100%;
+  padding: var(--gap) var(--gap) 0;
+
+  text-align: center;
+}
+
+.feature-text h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.feature-text h2 {
+  font-size: 2rem;
+}
+
+/* .feature-text p {} */
+
+.feature-text a {
+  display: block;
+
+  padding: var(--gap);
+
+  color: inherit;
+  text-decoration: none;
+
+  border: 1px solid gainsboro;
+}
+
+/* This is a full layer on top of the phone background component. */
+.phone-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+
+  /* background-color: #7fff0080; */
+}
+
+.particle {
+  position: absolute;
+  height: auto;
+}
+
+/* ================================================== */
+
+.particle-02-sign-01-left {
+  top: 166px;
+  left: -64px;
+  width: 148px;
+}
+
+.particle-02-sign-02-right {
+  top: 94px;
+  right: -58px;
+  width: 144px;
+}
+
+.particle-02-sign-03-bottom {
+  top: 342px;
+  left: -24px;
+  width: 98px;
+}
+
+.particle-02-file-01-top {
+  top: 94px;
+  left: 17px;
+  width: 191px;
+}
+
+.particle-02-file-02-middle {
+  top: 85px;
+  left: 23px;
+  width: 179px;
+}
+
+.particle-02-file-03-bottom {
+  top: 78px;
+  left: 37px;
+  width: 151px;
+}
+
+.particle-04-slider-01-left {
+  top: 50px;
+  left: -18px;
+  width: 28px;
+}
+
+.particle-04-slider-02-right {
+  top: 50px;
+  right: -18px;
+  width: 28px;
+}
+
+.particle-05-export-01-arrow {
+  top: 280px;
+  left: -44px;
+  width: 24px;
+}
+
+.particle-05-export-02-pdf {
+  top: 192px;
+  left: -18px;
+  width: 86px;
+}
+
+.particle-05-export-03-jpg {
+  top: 180px;
+  left: 69.5px;
+  width: 86px;
+}
+
+.particle-05-export-04-txt {
+  top: 192px;
+  right: -18px;
+  width: 86px;
+}
+
+/* ================================================== */
+
+@media (width >=700px) {
+  .content-item {
+    flex-direction: row-reverse;
+    gap: 0;
+    align-items: normal;
+    justify-content: space-evenly;
+  }
+
+  /* .content-bottom-left {} */
+
+  .content-top-right {
+    min-width: var(--content-top-right-min-width-desktop);
+    max-width: var(--content-top-right-max-width-desktop);
+  }
+
+  .phone {
+    padding-top: calc(8 * var(--gap));
+    padding-right: var(--gap);
+    padding-left: calc(5 * var(--gap));
+  }
+
+  .phone-clipper {
+    width: var(--phone-clipper-width-desktop);
+  }
+
+  .feature-text {
+    align-items: flex-end;
+
+    padding-top: calc(10 * var(--gap));
+    padding-right: calc(1.5 * var(--gap));
+    padding-left: var(--gap);
+
+    text-align: right;
+  }
+
+  /* .phone-particles {} */
+
+  .particle-02-sign-01-left {
+    top: 249px;
+    left: -96px;
+    width: 222px;
+  }
+
+  .particle-02-sign-02-right {
+    top: 141px;
+    right: -87px;
+    width: 216px;
+  }
+
+  .particle-02-sign-03-bottom {
+    top: 513px;
+    left: -36px;
+    width: 147px;
+  }
+
+  .particle-02-file-01-top {
+    top: 142px;
+    left: 33px;
+    width: 309px;
+  }
+
+  .particle-02-file-02-middle {
+    top: 128px;
+    left: 42px;
+    width: 291px;
+  }
+
+  .particle-02-file-03-bottom {
+    top: 117px;
+    left: 63px;
+    width: 249px;
+  }
+
+  .particle-04-slider-01-left {
+    top: 108px;
+    left: -27px;
+    width: 42px;
+  }
+
+  .particle-04-slider-02-right {
+    top: 108px;
+    right: -27px;
+    width: 42px;
+  }
+
+  .particle-05-export-01-arrow {
+    top: 424px;
+    left: -46px;
+    width: 36px;
+  }
+
+  .particle-05-export-02-pdf {
+    top: 292px;
+    left: -8px;
+    width: 129px;
+  }
+
+  .particle-05-export-03-jpg {
+    top: 278px;
+    left: 123px;
+    width: 129px;
+  }
+
+  .particle-05-export-04-txt {
+    top: 292px;
+    right: -8px;
+    width: 129px;
+  }
 }

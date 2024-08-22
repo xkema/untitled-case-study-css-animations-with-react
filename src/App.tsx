@@ -3,7 +3,11 @@ import styles from './App.module.css'
 function App() {
 
   return (
-    <>
+    <div className={styles.container}>
+      <header>
+        <h1>Case Study | CSS Animations</h1>
+      </header>
+
       <main className={styles.main}>
         <ol>
           <li>
@@ -29,7 +33,11 @@ function App() {
           </li> */}
         </ol>
       </main>
-    </>
+
+      <footer>
+        <p>Do not forget to add GitHub link here!</p>
+      </footer>
+    </div>
   );
 
 }
