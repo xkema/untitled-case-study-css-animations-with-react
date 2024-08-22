@@ -9,6 +9,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        [`abstract-version`]: resolve(
+          __dirname,
+          'demos/abstract-version/index.html',
+        ),
         [`css-with-unmounting`]: resolve(
           __dirname,
           'demos/css-with-unmounting/index.html',
