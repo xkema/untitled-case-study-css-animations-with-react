@@ -1,31 +1,25 @@
 import styles from '../../src/App.module.css';
 import { BackgroundSelector } from '../../src/components/BackgroundSelector';
 import { ButtonIconSelector } from '../../src/components/ButtonIconSelector';
+import { FeatureText } from '../../src/components/FeatureText';
+import { Footer } from '../../src/components/Footer';
+import { Header } from '../../src/components/Header';
 import { ParticleSelector } from '../../src/components/ParticleSelector';
 import { features } from '../../src/data/features';
 
 export function App() {
   return (
     <div className={styles.container}>
-      <header>
-        <h1>/demos/abstract-version/ - Case Study | CSS Animations</h1>
-        <a href="/">back-to-home</a>
-        <hr />
-      </header>
+      <Header>
+        <a href="/demos/abstract-version/">/demos/abstract-version/</a>
+      </Header>
 
       <main className={styles.main}>
         <div className={styles.content}>
           {features.map((feature) => (
             <div key={feature.id} className={styles['content-item']}>
               <div className={styles['content-top-right']}>
-                <div className={styles['feature-text']}>
-                  <h1>{feature.name}</h1>
-                  <h2>{feature.title}</h2>
-                  <p>{feature.description}</p>
-                  <a className={styles.link} href={feature.link}>
-                    Nobis Quos
-                  </a>
-                </div>
+                <FeatureText feature={feature} />
               </div>
               <div className={styles['content-bottom-left']}>
                 <div className={styles.phone}>
@@ -64,9 +58,7 @@ export function App() {
         </div>
       </main>
 
-      <footer>
-        <p>Do not forget to add GitHub link here!</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

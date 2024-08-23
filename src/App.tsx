@@ -1,4 +1,5 @@
 import styles from './App.module.css'
+import { Footer } from './components/Footer';
 
 function App() {
 
@@ -34,9 +35,7 @@ function App() {
         </ol>
       </main>
 
-      <footer>
-        <p>Do not forget to add GitHub link here!</p>
-      </footer>
+      <Footer />
     </div>
   );
 
