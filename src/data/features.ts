@@ -1,4 +1,14 @@
-const features = [
+interface Feature {
+  id: string;
+  name: string;
+  title: string;
+  description: string;
+  link: string;
+}
+
+export type FeatureProps = { feature: Feature };
+
+const features: Feature[] = [
   {
     id: '825cc467',
     name: 'Lorem Ipsum 01' /* Document Scanner */,

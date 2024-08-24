@@ -1,15 +1,7 @@
 import styles from '../../src/App.module.css';
+import { FeatureProps } from '../data/features';
 
-interface FeatureTextProps {
-  feature: {
-    name: string;
-    title: string;
-    description: string;
-    link: string;
-  };
-}
-
-export function FeatureText({ feature }: FeatureTextProps) {
+export function FeatureText({ feature }: FeatureProps) {
   return (
     <div className={styles['feature-text']}>
       <h1>{feature.name}</h1>
