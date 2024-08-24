@@ -1,4 +1,4 @@
-interface Feature {
+export interface Feature {
   id: string;
   name: string;
   title: string;
