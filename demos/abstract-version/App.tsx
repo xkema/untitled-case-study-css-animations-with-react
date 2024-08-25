@@ -12,9 +12,7 @@ export function App() {
 
   return (
     <div className={styles.container}>
-      <Header>
-        <a href="/demos/abstract-version/">/demos/abstract-version/</a>
-      </Header>
+      <Header />
 
       <main className={styles.main}>
         <div className={styles.content}>

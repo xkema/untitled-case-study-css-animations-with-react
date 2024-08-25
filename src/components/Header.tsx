@@ -1,13 +1,9 @@
-import { ReactNode } from 'react';
-
-interface HeaderProps {
-  children?: ReactNode;
-}
-
-export function Header({ children }: HeaderProps) {
+export function Header() {
   return (
     <header>
-      <h1>{children}</h1>
+      <h1>
+        <a href={window.location.pathname}>{window.location.pathname}</a>
+      </h1>
       <a href="/">&larr; back-to-home</a>
     </header>
   );
