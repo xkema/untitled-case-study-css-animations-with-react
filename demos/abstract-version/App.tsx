@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import styles from '../../src/App.module.css';
 import { Button } from '../../src/components/Button';
-import { FeatureText } from '../../src/components/FeatureText';
 import { Footer } from '../../src/components/Footer';
 import { Header } from '../../src/components/Header';
-import { Phone } from '../../src/components/Phone';
 import { features } from '../../src/data/features';
+import { ContentItem } from '../../src/components/ContentItem';
 
 export function App() {
   const [activeId, setActiveId] = useState('825cc467');
@@ -19,13 +18,11 @@ export function App() {
           {features.map(
             (feature) =>
               feature.id === activeId && (
-                <div key={feature.id} className={styles['content-item']}>
-                  <div className={styles['content-top-right']}>
-                    <FeatureText feature={feature} />
-                  </div>
-                  <div className={styles['content-bottom-left']}>
-                    <Phone feature={feature} />
-                  </div>
+                <div
+                  className={styles['content-item-wrapper']}
+                  key={feature.id}
+                >
+                  <ContentItem feature={feature} />
                 </div>
               ),
           )}

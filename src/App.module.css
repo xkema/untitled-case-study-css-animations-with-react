@@ -48,9 +48,14 @@ body {
   background-color: var(--color-content-background);
 }
 
-.content-item {
+/* This extra wrapper is to simplify adapting animation libraries with the `.content-item` component. */
+.content-item-wrapper {
   scroll-snap-align: center;
+  display: flex;
+  flex: 1 0 100%;
+}
 
+.content-item {
   /* Setting overflow in one direction can be quirky in different borwsers! */
 
   overflow-y: clip;
