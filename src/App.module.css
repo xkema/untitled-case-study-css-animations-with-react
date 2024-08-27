@@ -40,6 +40,9 @@ body {
   scroll-snap-type: x mandatory;
 
   overflow-x: auto;
+
+  /* To prevent y-axis `transform` animations to enable scrollbars. */
+  overflow-y: clip;
   display: flex;
 
   width: 100%;
