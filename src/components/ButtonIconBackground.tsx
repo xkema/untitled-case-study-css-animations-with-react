@@ -11,9 +11,7 @@ export function ButtonIconBackground({
   feature,
   activeId,
 }: ButtonIconBackgroundProps) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const isActive = feature.id === activeId;
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const isFirstItem = feature.id === '825cc467';
 
   // The `tsc -b` flag of the `build` command doesn't listen to the line disablers. 
@@ -32,14 +30,18 @@ export function ButtonIconBackground({
             // Overrides CSS `stroke` styles from the `abstract-version`!
             stroke: 'var(--color-border-navigation-button)',
           }}
-          initial={{
-            pathLength: isActive ? 0 : 1,
-          }}
+          initial={
+            isFirstItem
+              ? {
+                  pathLength: isActive ? 0 : 1,
+                }
+              : false
+          }
           animate={{
             pathLength: isActive ? 1 : 0,
           }}
           transition={{
-            duration: 1.5,
+            duration: 0.5,
           }}
         />
       </svg>
