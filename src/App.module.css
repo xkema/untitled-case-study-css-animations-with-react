@@ -120,9 +120,39 @@ body {
   background-color: var(--background-color-link-active);
 }
 
-/* .navigation-button-icon {} */
+.navigation-button-icon {
+  position: relative;
+  display: block;
+}
+
+.button-icon-background {
+  position: absolute;
+
+  /* This properties require manual adjustment based on the navigation icon size! */
+  top: -12px;
+  left: -12px;
+}
+
+.button-icon-background svg {
+  display: block;
+}
+
+.button-icon-background circle {
+  fill: none;
+  stroke: gainsboro;
+  stroke-width: 2px;
+}
+
+.navigation-button.active .button-icon-background circle {
+  stroke: var(--color-border-navigation-button);
+}
+
+.button-icon-image {
+  position: relative;
+}
 
 .navigation-button-text {
+  display: block;
   text-wrap: nowrap;
 }
 

@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction } from 'react';
 import styles from '../../src/App.module.css';
 import { ButtonIconSelector } from './ButtonIconSelector';
 import { Feature } from '../data/features';
+import { ButtonIconBackground } from './ButtonIconBackground';
 
 export type ButtonProps = {
   feature: Feature;
@@ -18,6 +19,7 @@ export function Button({ feature, activeId, setActiveId }: ButtonProps) {
       }}
     >
       <span className={styles['navigation-button-icon']}>
+        <ButtonIconBackground />
         <ButtonIconSelector featureId={feature.id} featureName={feature.name} />
       </span>
       <span className={styles['navigation-button-text']}>{feature.name}</span>
