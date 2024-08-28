@@ -122,7 +122,12 @@ body {
 
 .navigation-button-icon {
   position: relative;
+
   display: block;
+
+  aspect-ratio: 1 / 1;
+  min-width: 32px;
+  height: auto;
 }
 
 .button-icon-background {
@@ -131,6 +136,7 @@ body {
   /* This properties require manual adjustment based on the navigation icon size! */
   top: -12px;
   left: -12px;
+  display: block;
 }
 
 .button-icon-background svg {
