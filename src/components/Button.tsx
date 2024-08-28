@@ -19,7 +19,7 @@ export function Button({ feature, activeId, setActiveId }: ButtonProps) {
       }}
     >
       <span className={styles['navigation-button-icon']}>
-        <ButtonIconBackground />
+        <ButtonIconBackground feature={feature} activeId={activeId} />
         <ButtonIconSelector featureId={feature.id} featureName={feature.name} />
       </span>
       <span className={styles['navigation-button-text']}>{feature.name}</span>
