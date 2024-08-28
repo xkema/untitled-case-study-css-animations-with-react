@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styles from '../../src/App.module.css';
 import { Feature } from '../data/features';
 
@@ -21,7 +22,26 @@ export function ButtonIconBackground({
   return (
     <span className={styles['button-icon-background']}>
       <svg width="56" height="56" viewBox="0 0 56 56">
-        <circle cx="28" cy="28" r="27" />
+        <motion.circle
+          cx="28"
+          cy="28"
+          r="27"
+          style={{
+            rotate: -90,
+            rotateX: 180,
+            // Overrides CSS `stroke` styles from the `abstract-version`!
+            stroke: 'var(--color-border-navigation-button)',
+          }}
+          initial={{
+            pathLength: isActive ? 0 : 1,
+          }}
+          animate={{
+            pathLength: isActive ? 1 : 0,
+          }}
+          transition={{
+            duration: 1.5,
+          }}
+        />
       </svg>
     </span>
   );
