@@ -1,38 +1,43 @@
-import styles from './App.module.css'
+import { useState } from 'react';
+import styles from './App.module.css';
+import { Header } from './components/Header';
+import { features } from './data/features';
+import { ContentItem } from './components/ContentItem';
+import { Button } from './components/Button';
 import { Footer } from './components/Footer';
 
-function App() {
+export function App() {
+  const [activeId, setActiveId] = useState('825cc467');
 
   return (
     <div className={styles.container}>
-      <header>
-        <h1>Case Study | CSS Animations</h1>
-      </header>
+      <Header />
 
       <main className={styles.main}>
-        <ol>
-          <li>
-            <a href="/demos/abstract-version/">/demos/abstract-version/</a>
-          </li>
-          {/* <li>
-            <a href="/demos/css-without-unmounting/">
-              /demos/css-without-unmounting/
-            </a>
-          </li> */}
-          {/* <li>
-            <a href="/demos/css-with-unmounting/">
-              /demos/css-with-unmounting/
-            </a>
-          </li> */}
-          {/* <li>
-            <a href="/demos/framer-motion/">/demos/framer-motion/</a>
-          </li> */}
-          {/* <li>
-            <a href="/demos/react-transition-group/">
-              /demos/react-transition-group/
-            </a>
-          </li> */}
-        </ol>
+        <div className={styles.content}>
+          {features.map(
+            (feature) =>
+              feature.id === activeId && (
+                <div
+                  className={styles['content-item-wrapper']}
+                  key={feature.id}
+                >
+                  <ContentItem feature={feature} />
+                </div>
+              ),
+          )}
+        </div>
+        <div className={styles.navigation}>
+          {features.map((feature) => (
+            <div key={feature.id} className={styles['navigation-item']}>
+              <Button
+                feature={feature}
+                activeId={activeId}
+                setActiveId={setActiveId}
+              />
+            </div>
+          ))}
+        </div>
       </main>
 
       <Footer />
