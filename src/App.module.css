@@ -1,6 +1,6 @@
 :root {
   --color-primary: #0381ff;
-  --color-link-active: #f7fbff;
+  --background-color-link-active: #f7fbff;
   --color-background: #f5f5f7;
   --color-content-background: #fbfcfc;
   --gap: 1rem;
@@ -13,6 +13,7 @@
   --phone-clipper-width-desktop: 375px;
   --phone-background-min-width: 225px;
   --phone-background-min-width-desktop: 375px;
+  --color-border-navigation-button: #0181fd;
 
   /* --phone-clipper-height: 300px; */
 
@@ -111,11 +112,12 @@ body {
   height: 100%;
   padding: calc(2 * var(--gap)) calc(1 * var(--gap));
 
-  background-color: white;
+  background-color: #fff;
+  border: 3px solid transparent;
 }
 
 .navigation-button.active {
-  background-color: var(--color-link-active);
+  background-color: var(--background-color-link-active);
 }
 
 /* .navigation-button-icon {} */
