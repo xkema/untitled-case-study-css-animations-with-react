@@ -15,6 +15,9 @@ export function ButtonIconBackground({
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const isFirstItem = feature.id === '825cc467';
 
+  // The `tsc -b` flag of the `build` command doesn't listen to the line disablers. 
+  // Either remove the `-b` (build) flag or skip type checking then building `abstract-version`.
+
   return (
     <span className={styles['button-icon-background']}>
       <svg width="56" height="56" viewBox="0 0 56 56">
