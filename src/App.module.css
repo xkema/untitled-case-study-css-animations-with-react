@@ -91,6 +91,9 @@ body {
   scroll-snap-type: x mandatory;
   overflow: auto;
   display: flex;
+
+  position: sticky;
+  bottom: 0;
 }
 
 .navigation-item {
@@ -323,6 +326,11 @@ body {
   .content-top-right {
     min-width: var(--content-top-right-min-width-desktop);
     max-width: var(--content-top-right-max-width-desktop);
+  }
+
+  .navigation {
+    position: relative;
+    bottom: auto;
   }
 
   .phone {
