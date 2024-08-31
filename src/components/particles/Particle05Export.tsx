@@ -13,7 +13,7 @@ export function Particle05Export() {
         className={`${styles['particle']} ${styles['particle-05-export-01-arrow']}`}
         src={export01Arrow}
         alt="export-01-arrow"
-        initial={{ x: '450%', y: '350%', rotate: 0 }}
+        initial={{ x: '450%', y: '500%', rotate: 0 }}
         animate={{ x: 0, y: 0, rotate: -45 }}
         transition={{ duration: 0.5, delay: 1 }}
       />
@@ -21,7 +21,7 @@ export function Particle05Export() {
         className={`${styles['particle']} ${styles['particle-05-export-02-pdf']}`}
         src={export02Pdf}
         alt="export-02-pdf"
-        initial={{ x: '100%', y: '130%', rotate: 0 }}
+        initial={{ x: '99%', y: '180%', rotate: 0 }}
         animate={{ x: 0, y: 0, rotate: -22.5 }}
         transition={{ duration: 0.5, delay: 1.25 }}
       />
@@ -29,7 +29,7 @@ export function Particle05Export() {
         className={`${styles['particle']} ${styles['particle-05-export-03-jpg']}`}
         src={export03Jpg}
         alt="export-03-jpg"
-        initial={{ y: '145%' }}
+        initial={{ y: '200%' }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, delay: 1.5 }}
         style={{ zIndex: 1 }}
@@ -38,7 +38,7 @@ export function Particle05Export() {
         className={`${styles['particle']} ${styles['particle-05-export-04-txt']}`}
         src={export04Txt}
         alt="export-04-txt"
-        initial={{ x: '-100%', y: '130%', rotate: 0 }}
+        initial={{ x: '-99%', y: '180%', rotate: 0 }}
         animate={{ x: 0, y: 0, rotate: 22.5 }}
         transition={{ duration: 0.5, delay: 1.75 }}
       />
