@@ -37,6 +37,12 @@
   border-right: none;
 }
 
+.back-to-home {
+  text-align: center;
+  padding: var(--gap);
+}
+
+
 @media (width >=1120px) {
   .container {
     max-width: 1440px;
@@ -44,5 +50,10 @@
 
   .feature {
     flex-direction: row;
+  }
+
+  .back-to-home {
+    text-align: right;
+    padding: var(--gap) var(--gap-2xl) var(--gap) var(--gap);
   }
 }

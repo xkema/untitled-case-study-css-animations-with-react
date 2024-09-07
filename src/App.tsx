@@ -11,6 +11,7 @@ export function App() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
+        <div className={styles['back-to-home']}><a href="/untitled-case-study-css-animations-with-react/">← back-to-home</a></div>
         <div className={styles.content}>
           {features.map((feature) => {
             return (
