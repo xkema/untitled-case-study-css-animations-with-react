@@ -7,7 +7,7 @@ interface FooterProps {
 export function Footer({ children }: FooterProps) {
   return (
     <footer>
-      <p>Do not forget to add GitHub link here!</p>
+      <p><a href="https://github.com/xkema/untitled-case-study-css-animations-with-react">GitHub</a></p>
       {children}
     </footer>
   );
